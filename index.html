@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Raspi Control</title>
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+<link type="text/css" href="style.css" rel="stylesheet"></link>
+
+<meta name="theme-color" content="#888888" id="themecolor">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<script>
+  var socket = io();
+  function shutdown() {
+	socket.emit('shutdown', 'shutdown');
+    return false;
+  }
+  
+  function restart() {
+	socket.emit('restart', 'restart');
+    return false;
+  }
+
+  function hdmion() {
+	socket.emit('hdmion', 'hdmion');
+    return false;
+  }
+
+  function hdmioff() {
+	socket.emit('hdmioff', 'hdmioff');
+    return false;
+  }	
+  
+  function lightdm() {
+	socket.emit('lightdm', 'lightdm');
+    return false;
+  }	
+</script>
+  </head>
+  <body>
+	<div id="switches">
+		<div class="button" onclick="shutdown()">
+			<img src="/open-iconic/svg/power-standby.svg" width="20">
+			<span class="label">Shutdown</span>
+		</div>
+		<div class="button" onclick="restart()">
+			<img src="/open-iconic/svg/reload.svg" width="20">
+			<span class="label">Restart</span>
+		</div>
+		
+		<div class="button" onclick="hdmion()">
+			<img src="/open-iconic/svg/circle-check.svg" width="20">
+			<span class="label">HDMI On</span>
+		</div>
+		<div class="button" onclick="hdmioff()">
+			<img src="/open-iconic/svg/circle-x.svg" width="20">
+			<span class="label">HDMI Off</span>
+		</div>
+		
+		<div class="button" onclick="lightdm()">
+			<img src="/open-iconic/svg/lightbulb.svg" width="20">
+			<span class="label">Restart LightDM</span>
+		</div>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "raspi-control",
+  "version": "0.0.2",
+  "description": "A Node.js app that let's you control your Raspberry Pi remotely",
+  "main": "index.js",
+  "dependencies": {
+    	"express": "*",
+		"socket.io": "^1.2.1",
+		"ssh2": "*"
+	}
+}

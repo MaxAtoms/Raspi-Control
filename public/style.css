@@ -1,0 +1,32 @@
+body {
+    background-color: #888888;
+}
+
+#switches {
+	background: #444444;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-radius: 12px;
+	font-size: 1.2em;
+	color: white;
+	position: absolute;
+	width: 300px;
+	height: 230px;
+	top: 50%;
+	left: 50%;
+	margin-top: -115px;
+	margin-left: -150px;
+}
+
+.button {
+	background-color: #1e1e1e;
+	margin: 10px;
+	padding: 5px;
+	border-radius: 12px;
+	cursor: pointer;
+}
+	
+.label {
+	margin-left: 5%;
+	text-align: center;
+	width: 100%;
+	}
