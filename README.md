@@ -1,6 +1,6 @@
 # Raspi-Control
-![Screenshot ot the Raspi-Control webinterface](screenshot.png)
 A Node.js app that let's you control your Raspberry Pi remotely
+![Screenshot ot the Raspi-Control webinterface](screenshot.png)
 
 ## Installation guide
 1.Clone the repo
